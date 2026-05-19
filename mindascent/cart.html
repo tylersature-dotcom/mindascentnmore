@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Your cart — Mindascent N More (MOS) Luxury Fragrances"
+    />
+    <meta name="theme-color" content="#0D0D0D" />
+    <title>Your Cart | Mindascent N More — MOS</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="icons/mos-favicon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Google Identity Services -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+    <!-- Paystack Script -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Cart Page Stylesheet -->
+    <link rel="stylesheet" href="cart.css" />
+  </head>
+
+  <body>
+
+    <!-- ============================================================
+         PAGE LOADER
+    ============================================================ -->
+    <div class="page-loader" id="page-loader">
+      <div class="page-loader__content">
+        <span class="page-loader__logo-mos">MOS</span>
+        <span class="page-loader__logo-full">Mindascent N More</span>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         NAVIGATION BAR (same as index.html)
+    ============================================================ -->
+    <header class="navbar navbar--scrolled" id="navbar">
+      <div class="navbar__container">
+
+        <a href="index.html" class="navbar__logo" aria-label="Mindascent N More Home">
+          <span class="navbar__logo-text">
+            <span class="navbar__logo-mos">MOS</span>
+            <span class="navbar__logo-full">Mindascent N More</span>
+          </span>
+        </a>
+
+        <nav class="navbar__nav" aria-label="Main navigation">
+          <ul class="navbar__links" role="list">
+            <li><a href="index.html#home" class="navbar__link">Home</a></li>
+            <li><a href="index.html#shop" class="navbar__link">Shop</a></li>
+            <li><a href="index.html#about" class="navbar__link">About</a></li>
+            <li><a href="index.html#contact" class="navbar__link">Contact</a></li>
+            <li><a href="#" class="navbar__link" id="login-trigger">Sign Up</a></li>
+          </ul>
+        </nav>
+
+        <div class="navbar__controls">
+          <button class="btn btn--gold btn--sm navbar__auth-btn" id="login-trigger-btn">
+            <i class="fa-solid fa-user" aria-hidden="true"></i>
+            Sign Up
+          </button>
+          <a href="cart.html" class="navbar__cart" aria-label="View cart">
+            <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+            <span class="navbar__cart-badge" id="cart-badge">0</span>
+          </a>
+          <button
+            class="navbar__hamburger"
+            id="hamburger-btn"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <span class="navbar__hamburger-line"></span>
+            <span class="navbar__hamburger-line"></span>
+            <span class="navbar__hamburger-line"></span>
+          </button>
+        </div>
+      </div>
+
+      <nav
+        class="navbar__mobile-menu"
+        id="mobile-menu"
+        aria-label="Mobile navigation"
+        aria-hidden="true"
+      >
+        <ul class="navbar__mobile-links" role="list">
+          <li><a href="index.html#home" class="navbar__mobile-link">Home</a></li>
+          <li><a href="index.html#shop" class="navbar__mobile-link">Shop</a></li>
+          <li><a href="index.html#about" class="navbar__mobile-link">About</a></li>
+          <li><a href="index.html#contact" class="navbar__mobile-link">Contact</a></li>
+          <li><a href="#" class="navbar__mobile-link" id="mobile-login-trigger">Sign Up</a></li>
+          <li>
+            <a href="cart.html" class="navbar__mobile-link navbar__mobile-cart">
+              <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+              Cart
+              <span class="navbar__cart-badge" id="cart-badge-mobile">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <!-- ============================================================
+         MAIN CONTENT
+    ============================================================ -->
+    <main class="cart-page" id="main-content">
+
+      <!-- Page Header -->
+      <div class="cart-page__header">
+        <div class="cart-page__header-container">
+          <p class="section-header__eyebrow">Your Selection</p>
+          <h1 class="cart-page__title">Your Cart</h1>
+          <div class="section-header__divider"></div>
+          <p class="cart-page__subtitle">
+            <span id="cart-item-count">0 items</span> in your cart
+          </p>
+        </div>
+      </div>
+
+
+      <!-- Cart Body -->
+      <div class="cart-page__body">
+        <div class="cart-page__container">
+
+          <!-- LEFT: Cart Items Column -->
+          <div class="cart-page__items-col">
+
+            <!-- Cart Actions Bar -->
+            <div class="cart-actions-bar">
+              <a href="index.html#shop" class="cart-back-link">
+                <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                Continue Shopping
+              </a>
+              <button
+                class="btn btn--outline btn--sm"
+                id="clear-cart-btn"
+                aria-label="Clear all items from cart"
+              >
+                <i class="fa-solid fa-trash-can" aria-hidden="true"></i>
+                Clear Cart
+              </button>
+            </div>
+
+            <!-- Cart Items List (rendered by cart.js) -->
+            <div class="cart-items-list" id="cart-items" aria-live="polite">
+              <!-- Items injected by JavaScript -->
+            </div>
+
+            <!-- Empty Cart State -->
+            <div class="cart-empty" id="cart-empty" style="display: none;">
+              <div class="cart-empty__icon">
+                <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+              </div>
+              <h2 class="cart-empty__title">Your cart is empty</h2>
+              <p class="cart-empty__text">
+                Discover our collection of premium fragrances and find your signature scent.
+              </p>
+              <a href="index.html#shop" class="btn btn--gold btn--lg">
+                <i class="fa-solid fa-sparkles" aria-hidden="true"></i>
+                Shop Collection
+              </a>
+            </div>
+
+          </div>
+
+
+          <!-- RIGHT: Order Summary Column -->
+          <aside class="cart-page__summary-col" id="cart-summary">
+
+            <div class="cart-summary">
+
+              <h2 class="cart-summary__title">Order Summary</h2>
+              <div class="cart-summary__divider" aria-hidden="true"></div>
+
+              <!-- Summary Rows -->
+              <div class="cart-summary__rows">
+
+                <div class="cart-summary__row">
+                  <span class="cart-summary__label">Subtotal</span>
+                  <span class="cart-summary__value" id="cart-subtotal">₦0</span>
+                </div>
+
+                <div class="cart-summary__row">
+                  <span class="cart-summary__label">Delivery</span>
+                  <span class="cart-summary__value cart-summary__value--note">
+                    Discussed on WhatsApp
+                  </span>
+                </div>
+
+                <div class="cart-summary__row">
+                  <span class="cart-summary__label">Discount</span>
+                  <span class="cart-summary__value cart-summary__value--note">
+                    —
+                  </span>
+                </div>
+
+              </div>
+
+              <!-- Total -->
+              <div class="cart-summary__total-wrap">
+                <span class="cart-summary__total-label">Total</span>
+                <span class="cart-summary__total-value" id="cart-total">₦0</span>
+              </div>
+
+              <!-- Address Details Form (New Section) -->
+              <div class="address-details-form" id="address-details-form">
+                <h3 class="card-form__title">Delivery Address</h3>
+                <form id="address-form" class="card-form">
+                  <div class="form-group">
+                    <label for="full-name" class="form-label">Full Name</label>
+                    <input
+                      type="text"
+                      id="full-name"
+                      class="form-input"
+                      placeholder="John Doe"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="phone-number" class="form-label">Phone Number</label>
+                    <input
+                      type="tel"
+                      id="phone-number"
+                      class="form-input"
+                      placeholder="e.g., 08012345678"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="email-address" class="form-label">Email Address</label>
+                    <input
+                      type="email"
+                      id="email-address"
+                      class="form-input"
+                      placeholder="john.doe@example.com"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="street-address" class="form-label">Street Address</label>
+                    <input
+                      type="text"
+                      id="street-address"
+                      class="form-input"
+                      placeholder="123 Main St"
+                      required
+                    />
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group form-group--half">
+                      <label for="city" class="form-label">City</label>
+                      <input
+                        type="text"
+                        id="city"
+                        class="form-input"
+                        placeholder="Lagos"
+                        required
+                      />
+                    </div>
+                    <div class="form-group form-group--half">
+                      <label for="state" class="form-label">State</label>
+                      <input
+                        type="text"
+                        id="state"
+                        class="form-input"
+                        placeholder="Lagos State"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="postal-code" class="form-label">Postal Code (Optional)</label>
+                    <input
+                      type="text"
+                      id="postal-code"
+                      class="form-input"
+                      placeholder="100001"
+                    />
+                  </div>
+                  <button type="submit" class="btn btn--gold btn--lg form-submit-btn" id="save-address-btn">
+                    <i class="fa-solid fa-map-marker-alt" aria-hidden="true"></i>
+                    Save Address
+                  </button>
+                </form>
+              </div>
+
+              <!-- Payment Options -->
+              <div class="payment-options" id="payment-options-group" style="display: none;">
+                <!-- Main Toggle Button -->
+                <button class="btn btn--gold btn--lg cart-summary__checkout-btn" id="payment-methods-toggle">
+                  <i class="fa-solid fa-wallet" aria-hidden="true"></i>
+                  Payment Method
+                </button>
+
+                <!-- Electronic Payment Methods (Hidden initially) -->
+                <div id="payment-methods-group-inner" style="display: none; flex-direction: column; gap: var(--space-sm); width: 100%;">
+                  <button
+                    class="btn btn--gold btn--lg"
+                    id="paystack-checkout-btn"
+                    aria-label="Pay with Card"
+                  >
+                    <i class="fa-solid fa-credit-card" aria-hidden="true"></i>
+                    Pay with Card
+                  </button>
+                  <button
+                    class="btn btn--outline btn--lg"
+                    id="fcmb-transfer-btn"
+                    aria-label="Pay with Transfer"
+                  >
+                    <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+                    Pay with Transfer
+                  </button>
+                </div>
+
+                <button
+                  class="btn btn--outline btn--lg"
+                  id="whatsapp-checkout-btn"
+                  aria-label="Checkout via WhatsApp"
+                >
+                  <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                  Checkout via WhatsApp
+                </button>
+              </div>
+
+              <!-- Card Payment Form (Hidden by default) -->
+              <div class="card-payment-form" id="card-payment-form" style="display: none;">
+                <h3 class="card-form__title">Enter Card Details</h3>
+                
+                <div class="accepted-cards" style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem; color: var(--color-gold-light); font-size: 1.8rem; opacity: 0.8;">
+                  <i class="fa-brands fa-cc-visa" title="Visa"></i>
+                  <i class="fa-brands fa-cc-mastercard" title="Mastercard"></i>
+                  <i class="fa-solid fa-credit-card" title="Verve & others"></i>
+                </div>
+
+                <form id="payment-form" class="card-form">
+                  <div class="form-group">
+                    <label for="card-number" class="form-label">Card Number</label>
+                    <input
+                      type="text"
+                      id="card-number"
+                      class="form-input"
+                      placeholder="1234 5678 9012 3456 789"
+                      maxlength="23"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="customer-email" class="form-label">Email Address</label>
+                    <input
+                      type="email"
+                      id="customer-email"
+                      class="form-input"
+                      placeholder="e.g., john.doe@example.com"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group form-group--half">
+                      <label for="expiry-month" class="form-label">Expiry Month</label>
+                      <select id="expiry-month" class="form-input" required>
+                        <option value="">MM</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group form-group--half">
+                      <label for="expiry-year" class="form-label">Expiry Year</label>
+                      <select id="expiry-year" class="form-input" required>
+                        <option value="">YY</option>
+                        <script>
+                          const currentYear = new Date().getFullYear();
+                          for (let year = currentYear; year <= currentYear + 10; year++) {
+                            document.write(`<option value="${year.toString().slice(-2)}">${year}</option>`);
+                          }
+                        </script>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="cvv" class="form-label">CVV</label>
+                    <input
+                      type="text"
+                      id="cvv"
+                      class="form-input"
+                      placeholder="123"
+                      maxlength="4"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="card-name" class="form-label">Cardholder Name</label>
+                    <input
+                      type="text"
+                      id="card-name"
+                      class="form-input"
+                      placeholder="John Doe"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label class="checkbox-label">
+                      <input type="checkbox" id="save-card" class="checkbox-input" />
+                      <span class="checkbox-mark"></span>
+                      Save card for future payments
+                    </label>
+                  </div>
+
+                  <button type="submit" class="btn btn--gold btn--lg form-submit-btn" id="pay-btn">
+                    <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                    Pay Securely
+                  </button>
+
+                  <button type="button" class="btn btn--outline btn--sm form-cancel-btn" id="cancel-payment">
+                    Cancel
+                  </button>
+                </form>
+              </div>
+
+              <!-- FCMB Transfer Details (Hidden by default) -->
+              <div class="opay-payment-details" id="fcmb-payment-details" style="display: none;">
+                <h3 class="opay-details__title">FCMB Transfer Details</h3>
+                <div class="opay-details__content">
+                  <div class="opay-account-info">
+                    <div class="account-detail">
+                      <span class="detail-label">Account Number:</span>
+                      <span class="detail-value account-number">2001983464</span>
+                      <button class="copy-btn" id="copy-account" aria-label="Copy account number">
+                        <i class="fa-solid fa-copy"></i>
+                      </button>
+                    </div>
+
+                    <div class="account-detail">
+                      <span class="detail-label">Account Name:</span>
+                      <span class="detail-value">Mindascent 'N' More</span>
+                    </div>
+
+                    <div class="account-detail">
+                      <span class="detail-label">Amount to Transfer:</span>
+                      <span class="detail-value amount-display" id="fcmb-amount">₦0</span>
+                    </div>
+
+                    <div class="account-detail">
+                      <span class="detail-label">Bank:</span>
+                      <span class="detail-value">FCMB</span>
+                    </div>
+                  </div>
+
+                  <div class="opay-instructions">
+                    <h4 class="instructions-title">How to Pay:</h4>
+                    <ol class="instructions-list">
+                      <li>Open your FCMB or mobile banking app</li>
+                      <li>Go to Transfer → To Bank Account</li>
+                      <li>Enter the account number above</li>
+                      <li>Transfer the exact amount shown</li>
+                      <li>Take a screenshot of the successful transfer</li>
+                      <li>Click "I've Made Payment" below to confirm</li>
+                    </ol>
+                  </div>
+
+                  <div class="opay-actions">
+                    <button class="btn btn--gold btn--lg" id="confirm-fcmb-payment">
+                      <i class="fa-solid fa-check" aria-hidden="true"></i>
+                      I've Made Payment
+                    </button>
+
+                    <button type="button" class="btn btn--outline btn--sm" id="cancel-fcmb">
+                      Cancel
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Trust Note -->
+              <p class="cart-summary__trust-note">
+                <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                Secure payment processing
+              </p>
+
+              <!-- What Happens Next -->
+              <div class="cart-summary__steps">
+                <p class="cart-summary__steps-title">What happens next</p>
+                <ul class="cart-summary__steps-list" role="list">
+                  <li>
+                    <span class="cart-summary__step-num">1</span>
+                    Choose your payment method
+                  </li>
+                  <li>
+                    <span class="cart-summary__step-num">2</span>
+                    Complete payment securely
+                  </li>
+                  <li>
+                    <span class="cart-summary__step-num">3</span>
+                    Send payment confirmation via WhatsApp
+                  </li>
+                  <li>
+                    <span class="cart-summary__step-num">4</span>
+                    Your order is packaged and delivered
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </aside>
+
+        </div>
+      </div>
+
+    </main>
+
+
+    <!-- ============================================================
+         FOOTER
+    ============================================================ -->
+    <footer class="footer" aria-label="Site footer">
+      <div class="footer__container">
+
+        <div class="footer__top">
+
+          <div class="footer__brand">
+            <a href="index.html" class="navbar__logo" aria-label="Mindascent N More Home">
+              <span class="navbar__logo-text">
+                <span class="navbar__logo-mos">MOS</span>
+                <span class="navbar__logo-full">Mindascent N More</span>
+              </span>
+            </a>
+            <p class="footer__brand-text">
+              Premium luxury fragrances crafted for those who understand that true elegance is felt before it is seen.
+            </p>
+            <div class="footer__socials">
+              <a href="#" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="footer__social-link" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="footer__social-link" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer__col">
+            <h4 class="footer__col-title">Quick Links</h4>
+            <ul class="footer__links" role="list">
+              <li><a href="index.html#home" class="footer__link">Home</a></li>
+              <li><a href="index.html#shop" class="footer__link">Shop</a></li>
+              <li><a href="index.html#about" class="footer__link">About</a></li>
+              <li><a href="index.html#contact" class="footer__link">Contact</a></li>
+              <li><a href="cart.html" class="footer__link">Cart</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h4 class="footer__col-title">Collections</h4>
+            <ul class="footer__links" role="list">
+              <li><a href="index.html#shop" class="footer__link">Eau de Parfum</a></li>
+              <li><a href="index.html#shop" class="footer__link">Extrait de Parfum</a></li>
+              <li><a href="index.html#shop" class="footer__link">Eau de Toilette</a></li>
+              <li><a href="index.html#shop" class="footer__link">Limited Editions</a></li>
+              <li><a href="index.html#shop" class="footer__link">Bestsellers</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h4 class="footer__col-title">Contact</h4>
+            <ul class="footer__links footer__links--contact" role="list">
+              <li>
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                <a href="https://wa.me/23408075139979" class="footer__link" target="_blank" rel="noopener noreferrer">
+                  +234 08075139979
+                </a>
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                <a href="mailto:hello@mindascentnmore@gmail.com" class="footer__link">
+                  hello@MINDASCENTNMORE@GMAIL.COM
+                </a>
+              </li>
+              <li>
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <span class="footer__link">Lagos, Nigeria</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="footer__bottom">
+          <div class="footer__bottom-divider" aria-hidden="true"></div>
+          <div class="footer__bottom-content">
+            <p class="footer__copyright">
+              &copy; 2026 Mindascent N More (MOS). All rights reserved.
+            </p>
+            <p class="footer__credit">
+              Crafted with precision. Worn with purpose.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast" role="alert" aria-live="polite" aria-hidden="true">
+      <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+      <span class="toast__message" id="toast-message">Item added to cart</span>
+    </div>
+
+    <!-- Auth Modal -->
+    <div class="auth-modal" id="auth-modal" aria-hidden="true">
+      <div class="auth-modal__overlay"></div>
+      <div class="auth-modal__container">
+        <button class="auth-modal__close" id="auth-close" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        
+        <div class="auth-tabs">
+          <button class="auth-tab" data-mode="login">Login</button>
+          <button class="auth-tab is-active" data-mode="signup">Sign Up</button>
+        </div>
+
+        <form class="auth-form" id="auth-form">
+          <div class="form-group">
+            <label class="form-label">Email or Username</label>
+            <input type="text" class="form-input" placeholder="Enter your details" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-input" placeholder="••••••••" required>
+          </div>
+          <button type="submit" class="btn btn--gold btn--lg">Sign Up</button>
+        </form>
+
+        <div class="auth-divider">OR</div>
+
+        <button class="btn btn--outline btn--lg" id="gmail-auth-btn" style="width: 100%; justify-content: center;">
+          <i class="fa-brands fa-google"></i>
+          Continue with Gmail
+        </button>
+
+        <p class="cart-summary__trust-note" style="margin-top: var(--space-md);">
+          Your security is our priority.
+        </p>
+      </div>
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="cart.js"></script>
+    <script src="main.js"></script>
+
+  </body>
+</html>

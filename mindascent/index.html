@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mindascent N More (MOS) — Handcrafted luxury fragrances that define your identity."
+    />
+    <meta name="theme-color" content="#0D0D0D" />
+    <title>Mindascent N More | Luxury Fragrances — MOS</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="icons/mos-favicon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Cart Page Stylesheet -->
+    <link rel="stylesheet" href="cart.css" />
+  </head>
+
+  <body>
+
+    <!-- ============================================================
+         PAGE LOADER
+    ============================================================ -->
+    <div class="page-loader" id="page-loader">
+      <div class="page-loader__content">
+        <span class="page-loader__logo-mos">MOS</span>
+        <span class="page-loader__logo-full">Mindascent N More</span>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         NAVIGATION BAR (same as index.html)
+    ============================================================ -->
+    <header class="navbar navbar--scrolled" id="navbar">
+      <div class="navbar__container">
+
+        <a href="index.html" class="navbar__logo" aria-label="Mindascent N More Home">
+          <span class="navbar__logo-text">
+            <span class="navbar__logo-mos">MOS</span>
+            <span class="navbar__logo-full">Mindascent N More</span>
+          </span>
+        </a>
+        <nav class="navbar__nav" aria-label="Main navigation">
+          <ul class="navbar__links" role="list">
+            <li><a href="index.html#home" class="navbar__link">Home</a></li>
+            <li><a href="index.html#shop" class="navbar__link">Shop</a></li>
+            <li><a href="index.html#about" class="navbar__link">About</a></li>
+            <li><a href="index.html#contact" class="navbar__link">Contact</a></li>
+            <li><a href="cart.html" class="navbar__link">Cart</a></li>
+          </ul>
+        </nav>
+
+        <div class="navbar__controls">
+          <a href="cart.html" class="navbar__cart" aria-label="View cart">
+            <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+            <span class="navbar__cart-badge" id="cart-badge">0</span>
+          </a>
+          <button
+            class="navbar__hamburger"
+            id="hamburger-btn"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <span class="navbar__hamburger-line"></span>
+            <span class="navbar__hamburger-line"></span>
+            <span class="navbar__hamburger-line"></span>
+          </button>
+        </div>
+      </div>
+
+      <nav
+        class="navbar__mobile-menu"
+        id="mobile-menu"
+        aria-label="Mobile navigation"
+        aria-hidden="true"
+      >
+        <ul class="navbar__mobile-links" role="list">
+          <li><a href="index.html#home" class="navbar__mobile-link">Home</a></li>
+          <li><a href="index.html#shop" class="navbar__mobile-link">Shop</a></li>
+          <li><a href="index.html#about" class="navbar__mobile-link">About</a></li>
+          <li><a href="index.html#contact" class="navbar__mobile-link">Contact</a></li>
+          <li><a href="cart.html" class="navbar__mobile-link">Cart</a></li>
+          <li>
+            <a href="cart.html" class="navbar__mobile-link navbar__mobile-cart">
+              <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+              Cart
+              <span class="navbar__cart-badge" id="cart-badge-mobile">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+
+      <!-- ============================================================
+           HERO SECTION
+      ============================================================ -->
+      <section class="hero" id="home" aria-label="Hero banner">
+        <div class="hero__bg" aria-hidden="true"></div>
+        <div class="hero__overlay" aria-hidden="true"></div>
+
+
+        <div class="hero__content">
+          <p class="hero__eyebrow">The Art of Fragrance</p>
+          <h1 class="hero__heading">
+            Elevate Your<br>
+            <em>Presence</em>
+          </h1>
+          <p class="hero__subtitle">
+            Handcrafted luxury fragrances that whisper your story before you speak.
+            Discover the MOS collection — where scent becomes identity.
+          </p>
+          <div class="hero__cta-group">
+            <a href="#shop" class="btn btn--gold btn--lg">Shop Collection</a>
+            <a href="#about" class="btn btn--outline btn--lg">Our Story</a>
+            <a href="cart.html" class="btn btn--outline btn--lg">View Cart</a>
+          </div>
+        </div>
+
+      </section>
+
+
+      <!-- ============================================================
+           BRAND MARQUEE STRIP
+      ============================================================ -->
+      <div class="brand-strip" aria-hidden="true">
+        <div class="brand-strip__track">
+          <span>Luxury Fragrances</span>
+          <span class="brand-strip__dot"></span>
+          <span>Handcrafted Elegance</span>
+          <span class="brand-strip__dot"></span>
+          <span>Premium Ingredients</span>
+          <span class="brand-strip__dot"></span>
+          <span>Timeless Scents</span>
+          <span class="brand-strip__dot"></span>
+          <span>MOS Collection</span>
+          <span class="brand-strip__dot"></span>
+          <span>Luxury Fragrances</span>
+          <span class="brand-strip__dot"></span>
+          <span>Handcrafted Elegance</span>
+          <span class="brand-strip__dot"></span>
+          <span>Premium Ingredients</span>
+          <span class="brand-strip__dot"></span>
+          <span>Timeless Scents</span>
+          <span class="brand-strip__dot"></span>
+          <span>MOS Collection</span>
+          <span class="brand-strip__dot"></span>
+        </div>
+      </div>
+
+
+      <!-- ============================================================
+           FEATURED PRODUCTS SECTION
+      ============================================================ -->
+      <section class="products" id="shop" aria-label="Featured products">
+        <div class="products__container">
+
+          <!-- Section Header -->
+          <div class="section-header fade-in is-visible">
+            <p class="section-header__eyebrow">The Collection</p>
+            <h2 class="section-header__title">Featured Fragrances</h2>
+            <div class="section-header__divider" aria-hidden="true"></div>
+            <p class="section-header__subtitle">
+              Each bottle is a chapter. Each scent, a story. Explore our curated
+              selection of premium fragrances crafted for those who dare to be remembered.
+            </p>
+          </div>
+
+          <!-- Products Grid -->
+          <div class="products__grid">
+
+            <!-- Product Card 1 -->
+            <article class="product-card fade-in is-visible" data-product-id="1">
+              <div class="product-card__image-wrap" style="cursor: pointer;">
+                <img src="img/mindascent 2.jpeg" alt="Noir Absolu luxury perfume bottle" class="product-card__image img--loaded" loading="lazy">
+                <span class="product-card__badge">Bestseller</span>
+                <button class="product-card__wishlist" aria-label="Add to wishlist">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="product-card__body">
+                <p class="product-card__category">Eau de Parfum</p>
+                <h3 class="product-card__name">Maahir</h3>
+                <p class="product-card__description">
+                  Deep oud, smoky vetiver, and black amber — a powerhouse of mystery and seduction.
+                </p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">₦25,000</span>
+                  <button class="btn btn--gold btn--sm add-to-cart-btn" data-id="1" data-name="Maahir" data-price="25000" data-image="img/mindascent 2.jpeg" aria-label="Add Maahir to cart">
+                    <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product Card 2 -->
+            <article class="product-card fade-in fade-in--delay-2 is-visible" data-product-id="2">
+              <div class="product-card__image-wrap" style="cursor: pointer;">
+                <img src="img/mindascent6.jpeg" alt="Or Blanc premium fragrance bottle" class="product-card__image img--loaded" loading="lazy">
+                <span class="product-card__badge product-card__badge--new">New</span>
+                <button class="product-card__wishlist" aria-label="Add to wishlist">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="product-card__body">
+                <p class="product-card__category">Eau de Parfum</p>
+                <h3 class="product-card__name">ANGHAM</h3>
+                <p class="product-card__description">
+                  White musk, sandalwood, and vanilla orchid — soft luxury that lingers like a secret.
+                </p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">₦45,000</span>
+                  <button class="btn btn--gold btn--sm add-to-cart-btn" data-id="2" data-name="ANGHAM" data-price="45000" data-image="img/mindascent6.jpeg" aria-label="Add ANGHAM to cart">
+                    <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product Card 3 -->
+            <article class="product-card fade-in fade-in--delay-3 is-visible" data-product-id="3">
+              <div class="product-card__image-wrap" style="cursor: pointer;">
+                <img src="img/mindascent5.jpeg" alt="Vintage radio perfume bottle" class="product-card__image img--loaded" loading="lazy">
+
+                <button class="product-card__wishlist" aria-label="Add to wishlist">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="product-card__body">
+                <p class="product-card__category">Eau de Parfum</p>
+                <h3 class="product-card__name">Vintage radio</h3>
+                <p class="product-card__description">
+                  Bulgarian rose, peony, and warm cedar — femininity at its most opulent.
+                </p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">₦45,000</span>
+                  <button class="btn btn--gold btn--sm add-to-cart-btn" data-id="3" data-name="Vintage radio" data-price="45000" data-image="img/mindascent5.jpeg" aria-label="Add Vintage radio to cart">
+                    <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product Card 4 -->
+            <article class="product-card fade-in fade-in--delay-4 is-visible" data-product-id="4">
+              <div class="product-card__image-wrap" style="cursor: pointer;">
+                <img src="img/mindascent3.jpeg" alt="Ambre Sultan perfume bottle" class="product-card__image img--loaded" loading="lazy">
+                <span class="product-card__badge">Limited</span>
+                <button class="product-card__wishlist" aria-label="Add to wishlist">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="product-card__body">
+                <p class="product-card__category">Extrait de Parfum</p>
+                <h3 class="product-card__name">AL DIRGHAM</h3>
+                <p class="product-card__description">
+                  Golden amber, labdanum, and spiced clove — rich, bold, and unapologetically royal.
+                </p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">₦24,000</span>
+                  <button class="btn btn--gold btn--sm add-to-cart-btn" data-id="4" data-name="AL DIRGHAM" data-price="24000" data-image="img/mindascent3.jpeg" aria-label="Add AL DIRGHAM to cart">
+                    <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product Card 5 -->
+            <article class="product-card fade-in is-visible" data-product-id="5">
+              <div class="product-card__image-wrap" style="cursor: pointer;">
+                <img src="img/mindascent4.jpeg" alt="9PM REBEL perfume bottle" class="product-card__image img--loaded" loading="lazy">
+                <button class="product-card__wishlist" aria-label="Add to wishlist">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="product-card__body">
+                <p class="product-card__category">Eau de Parfum</p>
+                <h3 class="product-card__name">9PM REBEL</h3>
+                <p class="product-card__description">
+                  Midnight jasmine, star anise, and dark musk — made for evenings that become legends.
+                </p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">₦60,000</span>
+                  <button class="btn btn--gold btn--sm add-to-cart-btn" data-id="5" data-name="9PM REBEL" data-price="60000" data-image="img/mindascent4.jpeg" aria-label="Add 9PM REBEL to cart">
+                    <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product Card 6 -->
+            <article class="product-card fade-in fade-in--delay-2 is-visible" data-product-id="6">
+              <div class="product-card__image-wrap" style="cursor: pointer;">
+                <img src="img/mindascent7.jpeg" alt="ATHENA bottle" class="product-card__image img--loaded" loading="lazy">
+                <span class="product-card__badge product-card__badge--new">New</span>
+                <button class="product-card__wishlist" aria-label="Add to wishlist">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="product-card__body">
+                <p class="product-card__category">Eau de Parfum</p>
+                <h3 class="product-card__name">ATHENA</h3>
+                <p class="product-card__description">
+                  Atlas cedar, bergamot, and leather accord — the signature of a confident soul.
+                </p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">₦27,000</span>
+                  <button class="btn btn--gold btn--sm add-to-cart-btn" data-id="6" data-name="ATHENA" data-price="27000" data-image="img/mindascent7.jpeg" aria-label="Add ATHENA to cart">
+                    <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product Card 7 -->
+            <article class="product-card fade-in fade-in--delay-3 is-visible" data-product-id="7">
+              <div class="product-card__image-wrap" style="cursor: pointer;">
+                <img src="img/img2.jpeg" alt="KHUMAR perfume bottle" class="product-card__image img--loaded" loading="lazy">
+                <span class="product-card__badge">Bestseller</span>
+                <button class="product-card__wishlist" aria-label="Add to wishlist">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="product-card__body">
+                <p class="product-card__category">EAU DE PARFUM</p>
+                <h3 class="product-card__name">KHUMAR</h3>
+                <p class="product-card__description">
+                  EAU DE PARFUM,VAPORISATEUR-NATURAL SPRAY 100ML
+                </p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">₦21,000</span>
+                  <button class="btn btn--gold btn--sm add-to-cart-btn" data-id="7" data-name="KHUMAR" data-price="21000" data-image="img/img2.jpeg" aria-label="Add KHUMAR to cart">
+                    <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product Card 8 -->
+            <article class="product-card fade-in fade-in--delay-4 is-visible" data-product-id="8">
+              <div class="product-card__image-wrap" style="cursor: pointer;">
+                <img src="img/img1.jpeg" alt="LIAM perfume bottle" class="product-card__image img--loaded" loading="lazy">
+                <span class="product-card__badge">Limited</span>
+                <button class="product-card__wishlist" aria-label="Add to wishlist">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="product-card__body">
+                <p class="product-card__category">Eau de Parfum</p>
+                <h3 class="product-card__name">LIAM</h3>
+                <p class="product-card__description">
+                  EAU DE PARFUM,NATURAL SPRAY,VAPORISATEUR  LATTAFA 100ML.
+                </p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">₦27,000</span>
+                  <button class="btn btn--gold btn--sm add-to-cart-btn" data-id="8" data-name="LIAM" data-price="27000" data-image="img/img1.jpeg" aria-label="Add LIAM to cart">
+                    <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product Card 9 -->
+            <article class="product-card fade-in is-visible" data-product-id="9">
+              <div class="product-card__image-wrap" style="cursor: pointer;">
+                <img src="img/img4.jpeg" alt="MAYAR perfume bottle" class="product-card__image" loading="lazy">
+                <span class="product-card__badge">Popular</span>
+                <button class="product-card__wishlist" aria-label="Add to wishlist">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="product-card__body">
+                <p class="product-card__category">Eau de Parfum</p>
+                <h3 class="product-card__name">MAYAR</h3>
+                <p class="product-card__description">
+                  A perfect fusion of rich oud, creamy caramel, and warm vanilla for an enchanting presence.
+                </p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">₦28,000</span>
+                  <button class="btn btn--gold btn--sm add-to-cart-btn" data-id="9" data-name="MAYAR" data-price="28000" data-image="img/img4.jpeg" aria-label="Add MAYAR to cart">
+                    <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product Card 10 -->
+            <article class="product-card fade-in fade-in--delay-2 is-visible" data-product-id="10">
+              <div class="product-card__image-wrap" style="cursor: pointer;">
+                <img src="img/img5.jpeg" alt="SATWA perfume bottle" class="product-card__image" loading="lazy">
+                <button class="product-card__wishlist" aria-label="Add to wishlist">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="product-card__body">
+                <p class="product-card__category">Eau de Parfum</p>
+                <h3 class="product-card__name">SATWA</h3>
+                <p class="product-card__description">
+                  EAU DE PARFUM NATURAL SPRAY - VAPORISATEUR 100ML.
+                </p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">₦30,000</span>
+                  <button class="btn btn--gold btn--sm add-to-cart-btn" data-id="10" data-name="SATWA" data-price="30000" data-image="img/img5.jpeg" aria-label="Add SATWA to cart">
+                    <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product Card 11 -->
+            <article class="product-card fade-in fade-in--delay-3 is-visible" data-product-id="11">
+              <div class="product-card__image-wrap" style="cursor: pointer;">
+                <img src="img/img6.jpeg" alt="lAMSAT HARIIR perfume bottle" class="product-card__image" loading="lazy">
+                <span class="product-card__badge">Royal</span>
+                <button class="product-card__wishlist" aria-label="Add to wishlist">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="product-card__body">
+                <p class="product-card__category">Extrait de Parfum</p>
+                <h3 class="product-card__name">LAMSAT HARIIR</h3>
+                <p class="product-card__description">
+                  A majestic blend of Cambodian oud, intense spices, and rare woods for a truly regal trail.
+                </p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">₦15,000</span>
+                  <button class="btn btn--gold btn--sm add-to-cart-btn" data-id="11" data-name="LAMSAT HARIIR" data-price="15000" data-image="img/img6.jpeg" aria-label="Add LAMSAT HARIIR to cart">
+                    <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product Card 12 -->
+            <article class="product-card fade-in fade-in--delay-4 is-visible" data-product-id="12">
+              <div class="product-card__image-wrap" style="cursor: pointer;">
+                <img src="img/img7.jpeg" alt="SHAHRAZAD perfume bottle" class="product-card__image" loading="lazy">
+                <button class="product-card__wishlist" aria-label="Add to wishlist">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="product-card__body">
+                <p class="product-card__category">Eau de Parfum</p>
+                <h3 class="product-card__name">SHAHRAZAD</h3>
+                <p class="product-card__description">
+                  Crystal clear white musk paired with subtle floral notes—the definition of clean luxury.
+                </p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">₦30,000</span>
+                  <button class="btn btn--gold btn--sm add-to-cart-btn" data-id="12" data-name="SHAHRAZAD" data-price="30000" data-image="img/img7.jpeg" aria-label="Add SHAHRAZAD to cart">
+                    <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product Card 13 -->
+            <article class="product-card fade-in is-visible" data-product-id="13">
+              <div class="product-card__image-wrap product-card__image-wrap--gallery" style="cursor: pointer;">
+                <div class="product-card__gallery-controls">
+                  <button class="gallery-nav gallery-nav--prev" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+                  <button class="gallery-nav gallery-nav--next" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                <img src="img/img8.jpeg" 
+                     alt="Ana Abiyedh perfume bottle" 
+                     class="product-card__image" 
+                     loading="lazy" 
+                     data-index="0">
+                <!-- Hidden images for preloading and internal reference -->
+                <div class="hidden-gallery-assets" style="display: none;" aria-hidden="true">
+                  <img src="img/img9.jpeg" alt="" loading="eager">
+                  <img src="img/img10.jpeg" alt="" loading="eager">
+                  <img src="img/img11.jpeg" alt="" loading="eager">
+                  <img src="img/img12.jpeg" alt="" loading="eager">
+                  <img src="img/img13.jpeg" alt="" loading="eager">
+                  <img src="img/img14.jpeg" alt="" loading="eager">
+                  <img src="img/img15.jpeg" alt="" loading="eager">
+                </div>
+                <button class="product-card__wishlist" aria-label="Add to wishlist">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="product-card__body">
+                <p class="product-card__category">Eau de Parfum</p>
+                <h3 class="product-card__name">KALY</h3>
+                <p class="product-card__description">
+                  Velvety musk meets vibrant citrus and sweet pear for a sophisticated, uplifting presence.
+                </p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">₦10,000</span>
+                  <button class="btn btn--gold btn--sm add-to-cart-btn" data-id="13" data-name="KALY" data-price="10000" data-image="img/img8.jpeg" aria-label="Add KALY to cart">
+                    <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product Card 14 -->
+            <article class="product-card fade-in fade-in--delay-2 is-visible" data-product-id="14">
+              <div class="product-card__image-wrap" style="cursor: pointer;">
+                <img src="img/img16.jpeg" alt="Ameer Al Oudh perfume bottle" class="product-card__image" loading="lazy">
+                <button class="product-card__wishlist" aria-label="Add to wishlist">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="product-card__body">
+                <p class="product-card__category">Eau de Parfum</p>
+                <h3 class="product-card__name">MAAHIR</h3>
+                <p class="product-card__description">
+                  Intense woody notes with hints of sugar and incense—a rich, deep scent for the bold.
+                </p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">₦3500</span>
+                  <button class="btn btn--gold btn--sm add-to-cart-btn" data-id="14" data-name="MAAHIR" data-price="3500" data-image="img/img16.jpeg" aria-label="Add MAAHIR to cart">
+                    <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product Card 15 -->
+            <article class="product-card fade-in fade-in--delay-3 is-visible" data-product-id="15">
+              <div class="product-card__image-wrap" style="cursor: pointer;">
+                <img src="img/img17.jpeg" alt="Yara perfume bottle" class="product-card__image" loading="lazy">
+                <span class="product-card__badge">Trending</span>
+                <button class="product-card__wishlist" aria-label="Add to wishlist">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="product-card__body">
+                <p class="product-card__category">Eau de Parfum</p>
+                <h3 class="product-card__name">OPHILIA</h3>
+                <p class="product-card__description">
+                  A sweet gourmand masterpiece featuring tropical fruits, creamy vanilla, and sandalwood.
+                </p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">₦3,500</span>
+                  <button class="btn btn--gold btn--sm add-to-cart-btn" data-id="15" data-name="OPHILIA" data-price="3500" data-image="img/img17.jpeg" aria-label="Add OPHILIA to cart">
+                    <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product Card 16 -->
+            <article class="product-card fade-in fade-in--delay-4 is-visible" data-product-id="16">
+              <div class="product-card__image-wrap" style="cursor: pointer;">
+                <img src="img/img18.jpeg" alt="Asad perfume bottle" class="product-card__image" loading="lazy">
+                <button class="product-card__wishlist" aria-label="Add to wishlist">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="product-card__body">
+                <p class="product-card__category">Eau de Parfum</p>
+                <h3 class="product-card__name">LUXE</h3>
+                <p class="product-card__description">
+                  Spicy black pepper, tobacco, and warm vanilla—a powerful and masculine signature.
+                </p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">₦3,500</span>
+                  <button class="btn btn--gold btn--sm add-to-cart-btn" data-id="16" data-name="LUXE" data-price="3500" data-image="img/img18.jpeg" aria-label="Add LUXE to cart">
+                    <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product Card 17 -->
+            <article class="product-card fade-in is-visible" data-product-id="17">
+              <div class="product-card__image-wrap" style="cursor: pointer;">
+                <img src="img/img19.jpeg" alt="BERRY WEEKEND perfume bottle" class="product-card__image" loading="lazy">
+                <span class="product-card__badge">Bestseller</span>
+                <button class="product-card__wishlist" aria-label="Add to wishlist">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="product-card__body">
+                <p class="product-card__category">Eau de Parfum</p>
+                <h3 class="product-card__name">BERRY WEEKEND</h3>
+                <p class="product-card__description">
+                  A luxurious gourmand with notes of cinnamon, dates, and praline for a warm, spicy aura.
+                </p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">₦3,500</span>
+                  <button class="btn btn--gold btn--sm add-to-cart-btn" data-id="17" data-name="BERRY WEEKEND" data-price="3500" data-image="img/img19.jpeg" aria-label="Add BERRY WEEKEND to cart">
+                    <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product Card 18 -->
+            <article class="product-card fade-in fade-in--delay-2 is-visible" data-product-id="18">
+              <div class="product-card__image-wrap" style="cursor: pointer;">
+                <img src="img/img20.jpeg" alt="SUMMER PINK perfume bottle" class="product-card__image" loading="lazy">
+                <button class="product-card__wishlist" aria-label="Add to wishlist">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="product-card__body">
+                <p class="product-card__category">Eau de Parfum</p>
+                <h3 class="product-card__name">SUMMER PINK</h3>
+                <p class="product-card__description">
+                  A vibrant and refreshing blend of citrus and floral notes.
+                </p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">₦3,500</span>
+                  <button class="btn btn--gold btn--sm add-to-cart-btn" data-id="18" data-name="SUMMER PINK" data-price="3500" data-image="img/img20.jpeg" aria-label="Add SUMMER PINK to cart">
+                    <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product Card 19 -->
+            <article class="product-card fade-in" data-product-id="19">
+              <div class="product-card__image-wrap" style="cursor: pointer;">
+                <img src="img/img21.jpeg" alt="Queen Of Roses luxury perfume bottle" class="product-card__image" loading="lazy">
+                <button class="product-card__wishlist" aria-label="Add to wishlist">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="product-card__body">
+                <p class="product-card__category">Eau de Parfum</p>
+                <h3 class="product-card__name">Queen Of Roses</h3>
+                <p class="product-card__description">
+                  An opulent bouquet of damask rose and oriental spices, radiating royal elegance and grace.
+                </p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">₦42,000</span>
+                  <button class="btn btn--gold btn--sm add-to-cart-btn" data-id="19" data-name="Queen Of Roses" data-price="42000" data-image="img/img21.jpeg" aria-label="Add Queen Of Roses to cart">
+                    <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product Card 20 -->
+            <article class="product-card fade-in" data-product-id="20">
+              <div class="product-card__image-wrap" style="cursor: pointer;">
+                <img src="img/img22.jpeg" alt="Khamrah Qahwa luxury perfume bottle" class="product-card__image" loading="lazy">
+                <button class="product-card__wishlist" aria-label="Add to wishlist">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="product-card__body">
+                <p class="product-card__category">Eau de Parfum</p>
+                <h3 class="product-card__name">KHAMRAH QAHWA</h3>
+                <p class="product-card__description">
+                  A warm, decadent fusion of aromatic coffee, spicy cinnamon, and sweet praline—the ultimate winter indulgence.
+                </p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">₦40,000</span>
+                  <button class="btn btn--gold btn--sm add-to-cart-btn" data-id="20" data-name="KHAMRAH QAHWA" data-price="40000" data-image="img/img22.jpeg" aria-label="Add KHAMRAH QAHWA to cart">
+                    <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product Card 21 -->
+            <article class="product-card fade-in" data-product-id="21">
+              <div class="product-card__image-wrap" style="cursor: pointer;">
+                <img src="img/img23.jpeg" alt="REEF 33 perfume bottle" class="product-card__image" loading="lazy">
+                <button class="product-card__wishlist" aria-label="Add to wishlist">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="product-card__body">
+                <p class="product-card__category">Eau de Parfum</p>
+                <h3 class="product-card__name">REEF 33</h3>
+                <p class="product-card__description">
+                  A sophisticated blend of floral and woody notes, with a hint of musk, embodying modern elegance.
+                </p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">₦90,000</span>
+                  <button class="btn btn--gold btn--sm add-to-cart-btn" data-id="21" data-name="REEF 33" data-price="90000" data-image="img/img23.jpeg" aria-label="Add REEF 33 to cart">
+                    <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product Card 22 -->
+            <article class="product-card fade-in" data-product-id="22">
+              <div class="product-card__image-wrap" style="cursor: pointer;">
+                <img src="img/img24.jpeg" alt="ISHQ AL SHUYUKH GOLD perfume bottle" class="product-card__image" loading="lazy">
+                <button class="product-card__wishlist" aria-label="Add to wishlist">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="product-card__body">
+                <p class="product-card__category">Eau de Parfum</p>
+                <h3 class="product-card__name">ISHQ AL SHUYUKH GOLD</h3>
+                <p class="product-card__description">
+                  A luxurious blend of caramel, saffron, and vanilla, with a rich woody base for a captivating aroma.
+                </p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">₦45,000</span>
+                  <button class="btn btn--gold btn--sm add-to-cart-btn" data-id="22" data-name="ISHQ AL SHUYUKH GOLD" data-price="45000" data-image="img/img24.jpeg" aria-label="Add ISHQ AL SHUYUKH GOLD to cart">
+                    <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product Card 23 -->
+            <article class="product-card fade-in" data-product-id="23">
+              <div class="product-card__image-wrap" style="cursor: pointer;">
+                <img src="img/img25.jpeg" alt="Eclaire luxury perfume bottle" class="product-card__image" loading="lazy">
+                <button class="product-card__wishlist" aria-label="Add to wishlist">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="product-card__body">
+                <p class="product-card__category">Eau de Parfum</p>
+                <h3 class="product-card__name">ECLAIRE</h3>
+                <p class="product-card__description">
+                  A decadent gourmand symphony of creamy vanilla, warm caramel, and honeyed sugar—the viral sensation of pure sweetness.
+                </p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">₦45,000</span>
+                  <button class="btn btn--gold btn--sm add-to-cart-btn" data-id="23" data-name="ECLAIRE" data-price="45000" data-image="img/img25.jpeg" aria-label="Add ECLAIRE to cart">
+                    <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product Card 24 -->
+            <article class="product-card fade-in" data-product-id="24">
+              <div class="product-card__image-wrap" style="cursor: pointer;">
+                <img src="img/img26.jpeg" alt="Qissa Delicious luxury perfume bottle" class="product-card__image" loading="lazy">
+                <button class="product-card__wishlist" aria-label="Add to wishlist">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="product-card__body">
+                <p class="product-card__category">Eau de Parfum</p>
+                <h3 class="product-card__name">QISSA DELICIOUS</h3>
+                <p class="product-card__description">
+                  A luscious gourmand masterpiece by Paris Corner, blending rich dark chocolate, whipped cream, and marshmallow for a truly decadent trail.
+                </p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">₦28,000</span>
+                  <button class="btn btn--gold btn--sm add-to-cart-btn" data-id="24" data-name="QISSA DELICIOUS" data-price="28000" data-image="img/img26.jpeg" aria-label="Add QISSA DELICIOUS to cart">
+                    <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product Card 25 (Lazurde Rouge) -->
+            <article class="product-card fade-in" data-product-id="25">
+              <div class="product-card__image-wrap" style="cursor: pointer;">
+                <img src="img/img27.jpeg" alt="Lazurde Rouge perfume bottle" class="product-card__image" loading="lazy">
+                <button class="product-card__wishlist" aria-label="Add to wishlist">
+                  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="product-card__body">
+                <p class="product-card__category">Extrait de Parfum</p>
+                <h3 class="product-card__name">LAZURDE ROUGE</h3>
+                <p class="product-card__description">
+                  A vibrant and passionate blend of red fruits, exotic florals, and warm amber, perfect for summer nights.
+                </p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">₦20,000</span>
+                  <button class="btn btn--gold btn--sm add-to-cart-btn" data-id="25" data-name="LAZURDE ROUGE" data-price="20000" data-image="img/img27.jpeg" aria-label="Add LAZURDE ROUGE to cart">
+                    <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+
+          </div><!-- /products__grid -->
+        </div><!-- /products__container -->
+      </section>
+
+
+      <!-- ============================================================
+           ABOUT SECTION
+      ============================================================ -->
+      <section class="about" id="about" aria-label="About Mindascent N More">
+        <div class="about__container">
+
+          <div class="about__image-side fade-in is-visible">
+            <div class="about__image-wrap">
+              <img src="https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=800&amp;q=80" alt="Luxury perfume crafting process" class="about__image img--loaded" loading="lazy">
+              <div class="about__image-frame" aria-hidden="true"></div>
+            </div>
+            <div class="about__stat-card">
+              <span class="about__stat-number">4</span>
+              <span class="about__stat-label">Years of Craft</span>
+            </div>
+          </div>
+
+          <div class="about__content-side fade-in fade-in--delay-2 is-visible">
+            <p class="section-header__eyebrow">Our Story</p>
+            <h2 class="about__title">
+              Born From Passion,<br>
+              <em>Refined by Artistry</em>
+            </h2>
+            <div class="about__divider" aria-hidden="true"></div>
+            <p class="about__text">
+              Mindascent N More was born from a singular obsession — the belief that fragrance is not just a scent, but a language. A language that speaks of who you are, where you have been, and where you are going.
+            </p>
+            <p class="about__text">
+              Every bottle in our MOS collection is the result of relentless pursuit of perfection. We source the finest raw ingredients from across the globe — Bulgarian roses, Mysore sandalwood, Somalian oud — and place them in the hands of master perfumers who understand that true luxury cannot be rushed.
+            </p>
+            <p class="about__text">
+              This is not just perfume. This is your signature. Your presence. Your legacy.
+            </p>
+            <div class="about__features">
+              <div class="about__feature">
+                <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+                <span>Natural Ingredients</span>
+              </div>
+              <div class="about__feature">
+                <i class="fa-solid fa-flask" aria-hidden="true"></i>
+                <span>Master Crafted</span>
+              </div>
+              <div class="about__feature">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                <span>Globally Sourced</span>
+              </div>
+              <div class="about__feature">
+                <i class="fa-solid fa-award" aria-hidden="true"></i>
+                <span>Award Winning</span>
+              </div>
+            </div>
+            <a href="#shop" class="btn btn--gold btn--lg">Explore Collection</a>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- ============================================================
+           CONTACT SECTION
+      ============================================================ -->
+      <section class="contact" id="contact" aria-label="Contact us">
+        <div class="contact__container">
+
+          <div class="section-header fade-in is-visible">
+            <p class="section-header__eyebrow">Get In Touch</p>
+            <h2 class="section-header__title">We Would Love to Hear From You</h2>
+            <div class="section-header__divider" aria-hidden="true"></div>
+            <p class="section-header__subtitle">
+              Whether you have a question about our fragrances, want a personalized recommendation, or simply wish to connect — we are here for you.
+            </p>
+          </div>
+
+          <div class="contact__grid">
+
+            <!-- WhatsApp Card -->
+            <div class="contact__card fade-in is-visible">
+              <div class="contact__card-icon">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+              </div>
+              <h3 class="contact__card-title">WhatsApp</h3>
+              <p class="contact__card-text">Chat with us directly for orders and inquiries</p>
+              <a href="https://wa.me/23408075139979" class="btn btn--gold btn--md" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+                Chat With Us
+              </a>
+            </div>
+
+            <!-- Email Card -->
+            <div class="contact__card fade-in fade-in--delay-2 is-visible">
+              <div class="contact__card-icon">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              </div>
+              <h3 class="contact__card-title">Email Us</h3>
+              <p class="contact__card-text">Send us a message and we will respond within 24 hours</p>
+              <a href="mailto:mindascentnmore@gmail.com" class="btn btn--outline btn--md" aria-label="Send us an email">
+                mindascentnmore@gmail.com
+              </a>
+            </div>
+
+            <!-- Social Card -->
+            <div class="contact__card fade-in fade-in--delay-3 is-visible">
+              <div class="contact__card-icon">
+                <i class="fa-solid fa-share-nodes" aria-hidden="true"></i>
+              </div>
+              <h3 class="contact__card-title">Follow Us</h3>
+              <p class="contact__card-text">Stay connected and be the first to know about new releases</p>
+              <div class="contact__socials">
+                <a href="#" class="contact__social-link" aria-label="Follow us on Instagram" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="contact__social-link" aria-label="Follow us on Facebook" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="contact__social-link" aria-label="Follow us on TikTok" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="contact__social-link" aria-label="Follow us on X (Twitter)" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+
+    <!-- ============================================================
+         FOOTER
+    ============================================================ -->
+    <footer class="footer" aria-label="Site footer">
+      <div class="footer__container">
+
+        <div class="footer__top">
+
+          <div class="footer__brand">
+            <a href="index.html" class="navbar__logo" aria-label="Mindascent N More Home">
+              <span class="navbar__logo-text">
+                <span class="navbar__logo-mos">MOS</span>
+                <span class="navbar__logo-full">Mindascent N More</span>
+              </span>
+            </a>
+            <p class="footer__brand-text">
+              Premium luxury fragrances crafted for those who understand that true elegance is felt before it is seen.
+            </p>
+            <div class="footer__socials">
+              <a href="#" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="footer__social-link" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="footer__social-link" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer__col">
+            <h4 class="footer__col-title">Quick Links</h4>
+            <ul class="footer__links" role="list">
+              <li><a href="index.html#home" class="footer__link">Home</a></li>
+              <li><a href="index.html#shop" class="footer__link">Shop</a></li>
+              <li><a href="index.html#about" class="footer__link">About</a></li>
+              <li><a href="index.html#contact" class="footer__link">Contact</a></li>
+              <li><a href="cart.html" class="footer__link">Cart</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h4 class="footer__col-title">Collections</h4>
+            <ul class="footer__links" role="list">
+              <li><a href="index.html#shop" class="footer__link">Eau de Parfum</a></li>
+              <li><a href="index.html#shop" class="footer__link">Extrait de Parfum</a></li>
+              <li><a href="index.html#shop" class="footer__link">Eau de Toilette</a></li>
+              <li><a href="index.html#shop" class="footer__link">Limited Editions</a></li>
+              <li><a href="index.html#shop" class="footer__link">Bestsellers</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h4 class="footer__col-title">Contact</h4>
+            <ul class="footer__links footer__links--contact" role="list">
+              <li>
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                <a href="https://wa.me/2348075139979" class="footer__link" target="_blank" rel="noopener noreferrer">
+                  +234 807 513 9979
+                </a>
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                <a href="mailto:mindascentnmore@gmail.com" class="footer__link">
+                  mindascentnmore@gmail.com
+                </a>
+              </li>
+              <li>
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <span class="footer__link">Lagos, Nigeria</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="footer__bottom">
+          <div class="footer__bottom-divider" aria-hidden="true"></div>
+          <div class="footer__bottom-content">
+            <p class="footer__copyright">
+              &copy; 2026 Mindascent N More (MOS). All rights reserved.
+            </p>
+            <p class="footer__credit">
+              Crafted with precision. Worn with purpose.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast" role="alert" aria-live="polite" aria-hidden="true">
+      <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+      <span class="toast__message" id="toast-message">Item added to cart</span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="cart.js"></script>
+    <script src="main.js"></script>
